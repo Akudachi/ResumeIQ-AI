@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: resumeiq-ai
+    env: node
+    buildCommand: cd resumeIQ && npm install
+    startCommand: node resumeIQ/server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: GOOGLE_AI_API_KEY
+        sync: false
