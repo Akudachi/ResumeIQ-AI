@@ -2,10 +2,11 @@
   "name": "resumeiq-ai",
   "version": "1.0.0",
   "description": "AI-powered Resume Analyzer with ATS scoring and job matching",
-  "main": "resumeIQ/server/server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node resumeIQ/server/server.js",
-    "dev": "nodemon resumeIQ/server/server.js"
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "client": "cd client && python -m http.server 3000"
   },
   "keywords": [
     "resume",
@@ -21,6 +22,7 @@
     "axios": "^1.7.9",
     "compression": "^1.7.5",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.19.2",
     "express-rate-limit": "^7.5.0",
@@ -28,6 +30,10 @@
     "mammoth": "^1.7.2",
     "mongoose": "^8.9.2",
     "multer": "^1.4.5-lts.1",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
